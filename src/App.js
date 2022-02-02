@@ -1,13 +1,23 @@
-import './App.css';
-import Books from './components/Books'
+import {Switch, Route} from 'react-router-dom';
+import Books from './components/Books';
+import Categories from './components/Categories';
+import Navbar from './components/Navbar';
+import BookInput from './components/BookInput';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello react</h1>
+      <Navbar/>
+      <Switch>
+      <Route exact path='/'>
         <Books/>
-      </header>
+        <BookInput />
+      </Route>
+      <Route  path='/catigories'>
+        <Categories/>
+      </Route>
+      
+      </Switch>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 
-const Catigorise = () =>
+const catigories = () =>
 {
     return (
         <div>
@@ -7,3 +7,4 @@ const Catigorise = () =>
         </div>
     )
 }
+export default catigories;
