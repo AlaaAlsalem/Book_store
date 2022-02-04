@@ -13,11 +13,12 @@ const BookInput = (props) => {
       [e.target.name]: e.target.value,
     });
   };
+  const { propsToAddBooks } = props;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (input.title.trim() && input.author.trim()) {
-      props.propsToAddBooks(input.title, input.author);
+      propsToAddBooks(input.title, input.author);
       setInput({
         title: '',
         author: '',
